@@ -1,15 +1,10 @@
 - hosts: localhost
   vars:
-   host: 
-    192.168.56.109
   tasks:
   - name : " ajouter les noms de nos web dans hosts"
     lineinfile:
      dest: /etc/hosts
-     line: "{{ host }} app-salaire.ansar.form"
-    loop:
-      "{{ host }}"
-
+     line: "192.168.56.109 app-salaire.ansar.form"
 - hosts: web
   become: yes
   vars:
