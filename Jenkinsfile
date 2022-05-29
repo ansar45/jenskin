@@ -8,4 +8,4 @@ node{
           playbook: 'playbook.yaml',
           inventory: 'hosts.yaml'
       )
-    }
+    }}
