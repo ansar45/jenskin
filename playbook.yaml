@@ -1,3 +1,12 @@
+- hosts: localhost
+  tasks:
+  - name : " ajouter les noms de nos web dans hosts"
+    lineinfile:
+     dest: /etc/hosts
+     line: "192.168.56.109 www.{{ item }}.com"
+    loop:
+      "{{ item }}"
+
 - hosts: web
   become: yes
   vars:
