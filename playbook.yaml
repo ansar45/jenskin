@@ -14,7 +14,7 @@
      state: present
     loop:
      - epel-release
-     - mariadb
+     - mariadb-server
      - httpd
   - name: demmarage de service
     systemd:
